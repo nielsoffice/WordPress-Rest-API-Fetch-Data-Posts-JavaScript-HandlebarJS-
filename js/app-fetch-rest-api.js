@@ -14,7 +14,7 @@ if(btn) {
 
                 var data = JSON.parse(restRequest.responseText);
 
-                createHTML(data);
+                print_to_html(data);
                 btn.remove(); // remove button click more to load data !
             
              } else {
@@ -57,7 +57,7 @@ if(btn) {
 
 
 // With Handlebar JS
-function createHTML(postData) {
+function print_to_html(postData) {
    
     var restTemplate     = document.getElementById("posts-template").innerHTML;
     var compiledTemplate = Handlebars.compile(restTemplate);
